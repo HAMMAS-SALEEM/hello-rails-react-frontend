@@ -9,17 +9,20 @@ const getMessage = (payload) => ({
   payload,
 });
 
-// const getMessageAPI = () => (dispatch) => {
-//   fetch('http://localhost:4000/v1/messages')
-//   .then(res=>res.json())
-//   .then(json=>dispatch(getMessage(json)))
-// }
-
-const getMessageAPI = () => (dispatch) => {
-  const response = axios.get('http://localhost:4000/v1/messages');
-  const res = response.data;
+const getMessageAPI = () => async (dispatch) => {
+  const response = await axios.get('http://localhost:4000/v1/messages');
+  const res = await response.data;
   dispatch(getMessage(res));
 };
+
+// const getMessageAPI = () => async (dispatch) => {
+//   fetch('http://localhost:4000/v1/messages')
+// .then((res) => res.json())
+// .then((data) => {
+//   console.log(data);
+//   dispatch(getMessage(data));
+// });
+// };
 
 const messageReducer = (state = initialState, action) => {
   switch (action.type) {

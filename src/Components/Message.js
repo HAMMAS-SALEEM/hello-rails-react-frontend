@@ -5,7 +5,7 @@ import { getMessageAPI } from '../redux/message/message';
 const Message = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getMessageAPI);
+    dispatch(getMessageAPI());
   }, []);
   const store = useSelector((store) => store.messageReducer);
   return (
