@@ -1,10 +1,12 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Message from './Components/Message';
 
 function App() {
   return (
-    <div className="App">
-      <span>Hello It is working</span>
-    </div>
+    <Routes>
+      <Route path="/" element={<Message />} />
+    </Routes>
   );
 }
 
