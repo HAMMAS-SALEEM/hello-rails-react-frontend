@@ -2,6 +2,10 @@
 
 >  Hello rails app (Front-end) will serve as a front-end repository for developed rails endpoints, used to fetch random greetings from the database
 
+## Backend Project
+
+[Click Here](https://github.com/HAMMAS-SALEEM/hello-rails-react-backend)
+
 
 ## Built With
 
